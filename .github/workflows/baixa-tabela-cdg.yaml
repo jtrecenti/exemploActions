@@ -28,6 +28,7 @@ jobs:
             any::dplyr
             any::readr
             any::rvest
+            any::formattable
       - name: Run Script
         run: Rscript "baixa-cdg.R"
       - name: Commit results
