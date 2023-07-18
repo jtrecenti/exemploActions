@@ -33,8 +33,8 @@ jobs:
         run: Rscript "baixa-cdg.R"
       - name: Commit results
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git add -A
           git commit -m 'Update data' || echo "Update data"
           git push origin || echo "Update data"
